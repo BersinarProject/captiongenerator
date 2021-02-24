@@ -1,0 +1,42 @@
+    * {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+    }
+    
+    .card {
+        background-color: #f7f7f9;
+    }
+    
+    .title {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+        padding-top: 5%;
+    }
+    
+    .title2 {
+        font-weight: bold;
+        padding-bottom: 15px;
+    }
+    
+    .capt {
+        padding-top: 30px;
+    }
+    
+    .pelajaran {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    
+    #submit {
+        margin: 25px;
+    }
+    
+    p {
+        font-weight: bold;
+    }
+    
+    .row {
+        text-align: center;
+    }
