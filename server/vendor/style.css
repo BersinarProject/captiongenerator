@@ -1,6 +1,5 @@
     * {
         font-family: 'Poppins', sans-serif;
-        font-size: 20px;
     }
     
     .card {
@@ -37,6 +36,20 @@
         font-weight: bold;
     }
     
+    .radio-title {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    
     .row {
         text-align: center;
+    }
+    
+    .summary {
+        margin: 10px 10px 10px 10px;
+        border: 1px solid black;
+    }
+    
+    #summary {
+        font-weight: 300;
     }

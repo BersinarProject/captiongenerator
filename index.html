@@ -1,55 +1,46 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="server/res/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="server/res/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="server/res/favicon-16x16.png">
+    <link rel="manifest" href="server/res/site.webmanifest">
+    <title>BersinarProject Caption Generator</title>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link rel="apple-touch-icon" sizes="180x180" href="server/res/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="server/res/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="server/res/favicon-16x16.png">
-        <link rel="manifest" href="server/res/site.webmanifest">
-        <title>BersinarProject Caption Generator</title>
+    <!-- Bootstrap core CSS -->
+    <link href="server/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Bootstrap core CSS -->
-        <link href="server/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Load CSS -->
-        <link rel="stylesheet" href="server/vendor/style.css">
-        <!-- Bootstrap Jquery -->
-        <script src="server/vendor/jquery/jquery.min.js"></script>
-        <script src="server/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    </head>
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="server/vendor/style.css">
+    <!-- Bootstrap Jquery -->
+    <script src="server/vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+    <script src="server/vendor/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div class="card">
-
-
         <div class="container title rounded">
-            <div class="col-lg-12">
-                <h1 class="title2">Bersinar Project Caption Generator</h1>
+            <div class="col-md-12">
+                <h2 class="title2">Bersinar Project Caption Generator</h2>
             </div>
 
             <div class="alert alert-info" role="alert">
-                Pada bagian caption untuk enter diganti dengan command "
-                </*br>" tanpa *
+                Pada bagian caption untuk enter diganti dengan command "br"
             </div>
-            <form onsubmit="return results();" method="POST">
+            <form onsubmit="return false">
+
+
                 <h3 class="capt">Input caption here: </h3>
-                <textarea id="caption" name="caption" rows="8" cols="40">
-                      
-        </textarea>
+                <textarea id="caption" name="caption" rows="8" cols="40" value="clear"></textarea>
                 <h3 class="pelajaran ">Pelajaran:</h3>
                 <div class="row">
-
-
                     <div class="col-lg-4">
-
-                        <p>Soshum: </p>
+                        <p class="radio-title">Soshum: </p>
                         <input id="mapel1" type="radio" name="mapel" value="Sejarah" /> Sejarah <br>
                         <input id="mapel2" type="radio" name="mapel" value="Geografi" /> Geografi <br>
                         <input id="mapel3" type="radio" name="mapel" value="Ekonomi" /> Ekonomi <br>
@@ -57,7 +48,7 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <p>Saintek: </p>
+                        <p class="radio-title">Saintek: </p>
                         <input id="mapel5" type="radio" name="mapel" value="Matematika" /> Matematika <br>
                         <input id="mapel6" type="radio" name="mapel" value="Fisika" /> Fisika <br>
                         <input id="mapel7" type="radio" name="mapel" value="Biologi" /> Biologi <br>
@@ -65,59 +56,26 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <p>TPS: </p>
+                        <p class="radio-title">TPS: </p>
                         <input id="mapel9" type="radio" name="mapel" value="Bahasa" /> Bahasa <br>
                         <input id="mapel10" type="radio" name="mapel" value="English" /> English <br>
                         <input id="mapel11" type="radio" name="mapel" value="PK" /> PK <br>
                     </div>
                 </div>
-                <input id="submit" type="submit" value="Generate!" class="btn btn-primary" />
-
+                <button onclick="results()" id="submit" type="submit" class="btn btn-primary">Generate</button>
             </form>
+
+            <h3>Results</h3>
+            <div class="summary">
+                <area id="summary"></area>
+            </div>
+            <button data-clipboard-target="#summary" id="btn" class="btn btn-primary" alert="copied!">Copy</button>
         </div>
+
     </div>
     </div>
 
 </body>
-<script>
-    function results() {
-        var sosmed = "Follow Instagram & Twitter BersinarProject yuk! <br> Instagram : https://www.instagram.com/BersinarProject <br> Twitter : https://twitter.com/BersinarProject​"
-        var linkSoal = "Yuk akses soal UTBK dan SIMAK UI yang akan dibahas di http://Bit.ly/SoalBersinar​ <br> Yuk akses materi UTBK dan SIMAK UI yang akan dibahas di http://Bit.ly/MateriBersinar​"
-        var tag = "#BersinarBersama"
-        var caption = document.getElementById('caption').value;
-
-
-
-        if (document.getElementById('mapel1').checked) {
-            poll = "#MenyinariSejarah #MenyinariSoshum #BersinarBersama"
-        } else if (document.getElementById('mapel2').checked) {
-            poll = "#MenyinariGeografi #MenyinariSoshum #BersinarBersama"
-        } else if (document.getElementById('mapel3').checked) {
-            poll = "#MenyinariEkonomi #MenyinariSoshum #BersinarBersama"
-        } else if (document.getElementById('mapel4').checked) {
-            poll = "#MenyinariSosiologi #MenyinariSoshum #BersinarBersama"
-        } else if (document.getElementById('mapel5').checked) {
-            poll = "#MenyinariMatematika #MenyinariSaintek #BersinarBersama"
-        } else if (document.getElementById('mapel6').checked) {
-            poll = "#MenyinariFisika #MenyinariSaintek #BersinarBersama"
-        } else if (document.getElementById('mapel7').checked) {
-            poll = "#MenyinariBiologi #MenyinariSaintek #BersinarBersama"
-        } else if (document.getElementById('mapel8').checked) {
-            poll = "#MenyinariKimia #MenyinariSaintek #BersinarBersama"
-        } else if (document.getElementById('mapel9').checked) {
-            poll = "#MenyinariBahasa #MenyinariTPS #BersinarBersama"
-        } else if (document.getElementById('mapel10').checked) {
-            poll = "#MenyinariEnglish #MenyinariTPS #BersinarBersama"
-        } else if (document.getElementById('mapel11').checked) {
-            poll = "#MenyinariPK #MenyinariTPS #BersinarBersama"
-        }
-
-        document.write(caption + "<br/> <br/>")
-        document.write(sosmed + "<br/> <br/>")
-        document.write(linkSoal + "<br/>")
-        document.write(poll)
-
-    }
-</script>
+<script src="server/vendor/script.js"></script>
 
 </html>
