@@ -62,20 +62,26 @@
                         <input id="mapel11" type="radio" name="mapel" value="PK" /> PK <br>
                     </div>
                 </div>
-                <button onclick="results()" id="submit" type="submit" class="btn btn-primary">Generate</button>
+                <button onclick="results()" onclick="show()" id="submit" type="submit" class="btn btn-primary">Generate</button>
             </form>
 
-            <h3>Results</h3>
-            <div class="summary">
-                <area id="summary"></area>
+            <div id="result" style="display: none;">
+                <h3>Results</h3>
+                <div class="summary">
+                    <area id="summary"></area>
+                </div>
+                <button data-clipboard-target="#summary" id="btn" class="btn btn-primary" alert="copied!">Copy</button>
             </div>
-            <button data-clipboard-target="#summary" id="btn" class="btn btn-primary" alert="copied!">Copy</button>
         </div>
-
     </div>
     </div>
 
 </body>
 <script src="server/vendor/script.js"></script>
+<script>
+    $("#submit").click(function() {
+        $("#result").show();
+    })
+</script>
 
 </html>

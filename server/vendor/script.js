@@ -34,7 +34,6 @@ function results() {
 
 
     document.getElementById("summary").innerHTML = txt;
-
 }
 
 
