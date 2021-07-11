@@ -1,6 +1,6 @@
 function results() {
     var sosmed = "Follow Instagram & Twitter BersinarProject yuk! <br> Instagram : https://www.instagram.com/BersinarProject <br> Twitter : https://twitter.com/BersinarProject​"
-    var linkSoal = "Yuk akses soal UTBK dan SIMAK UI yang akan dibahas di http://Bit.ly/SoalBersinar​ <br> Yuk akses materi UTBK dan SIMAK UI yang akan dibahas di http://Bit.ly/MateriBersinar​"
+    var linkSoal = "Yuk akses soal yang akan dibahas di http://Bit.ly/SoalBersinar​ <br> Yuk akses materi yang akan dibahas di http://Bit.ly/MateriBersinar​"
     var caption = document.getElementById('caption').value;
 
     if (document.getElementById('mapel1').checked) {
