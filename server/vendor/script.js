@@ -2,6 +2,8 @@ function results() {
     var sosmed = "Follow Instagram & Twitter BersinarProject yuk! <br> Instagram : https://www.instagram.com/BersinarProject <br> Twitter : https://twitter.com/BersinarProject​"
     var linkSoal = "Yuk akses soal yang akan dibahas di http://Bit.ly/SoalBersinar​ <br> Yuk akses materi yang akan dibahas di http://Bit.ly/MateriBersinar​"
     var caption = document.getElementById('caption').value;
+    var split = caption.split('\n');
+    var newCaption = split.join('<br>');
 
     if (document.getElementById('mapel1').checked) {
         poll = "#MenyinariSejarah #MenyinariSoshum #BersinarBersama"
@@ -28,7 +30,7 @@ function results() {
     }
 
     var txt =
-        caption + "<br/> </br>" + sosmed + "<br/> </br>" +
+        newCaption + "<br/> </br>" + sosmed + "<br/> </br>" +
         linkSoal + "<br/> </br>" +
         poll + "<br/> </br>";
 
