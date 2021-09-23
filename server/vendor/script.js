@@ -27,6 +27,8 @@ function results() {
         poll = "#MenyinariEnglish #MenyinariTPS #BersinarBersama"
     } else if (document.getElementById('mapel11').checked) {
         poll = "#MenyinariPK #MenyinariTPS #BersinarBersama"
+    } else if (document.getElementById('mapel12').checked) {
+        poll = "#MenyinariPU #MenyinariTPS #BersinarBersama"
     }
 
     var txt =
