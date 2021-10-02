@@ -1,6 +1,7 @@
 function results() {
     var sosmed = "Follow Instagram & Twitter BersinarProject yuk! <br> Instagram : https://www.instagram.com/BersinarProject <br> Twitter : https://twitter.com/BersinarProject​"
     var linkSoal = "Yuk akses soal yang akan dibahas di http://Bit.ly/SoalBersinar​ <br> Yuk akses materi yang akan dibahas di http://Bit.ly/MateriBersinar​"
+    var trakteer = "Yuk traktirin Bersinar di https://bit.ly/TraktirinBersinar"
     var caption = document.getElementById('caption').value;
     var split = caption.split('\n');
     var newCaption = split.join('<br>');
@@ -33,7 +34,7 @@ function results() {
 
     var txt =
         newCaption + "<br/> </br>" + sosmed + "<br/> </br>" +
-        linkSoal + "<br/> </br>" +
+        linkSoal + "<br/> </br>" + trakteer +  "<br/> </br>" +
         poll + "<br/> </br>";
 
 
