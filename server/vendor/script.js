@@ -1,7 +1,7 @@
 function results() {
-    var sosmed = "Follow Instagram & Twitter BersinarProject yuk! <br> Instagram : https://www.instagram.com/BersinarProject <br> Twitter : https://twitter.com/BersinarProject​"
-    var linkSoal = "Yuk akses soal yang akan dibahas di http://bit.ly/SoalBersinar​ <br> Yuk akses materi yang akan dibahas di http://bit.ly/MateriBersinar​"
-    var trakteer = "Yuk traktirin Bersinar di https://bit.ly/TraktirinBersinar"
+    var sosmed = "Follow Instagram & Twitter Bersinar yuk! <br> Instagram : https://www.instagram.com/BersinarProject <br> Twitter : https://twitter.com/BersinarProject​"
+    var linkSoal = "Yuk akses materi yang akan dibahas di https://sinar.me/MateriBersinar​"
+    var trakteer = "Yuk traktirin Bersinar di https://sinar.me/TraktirinBersinar"
     var caption = document.getElementById('caption').value;
     var split = caption.split('\n');
     var newCaption = split.join('<br>');
